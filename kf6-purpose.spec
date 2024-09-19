@@ -8,7 +8,7 @@
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
 Version:	6.6.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -27,7 +27,7 @@ BuildRequires:	kf6-kio-devel >= %{version}
 BuildRequires:	kf6-kirigami-devel >= %{version}
 BuildRequires:	libaccounts-glib-devel
 # TODO
-#BuildRequires:	libaccounts-qt6-devel
+BuildRequires:	libaccounts-qt6-devel
 #BuildRequires:	libsignon-qt6-devel >= 8.55
 BuildRequires:	libutempter-devel
 BuildRequires:	ninja
