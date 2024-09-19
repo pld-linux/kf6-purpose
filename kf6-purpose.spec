@@ -26,9 +26,8 @@ BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	kf6-kio-devel >= %{version}
 BuildRequires:	kf6-kirigami-devel >= %{version}
 BuildRequires:	libaccounts-glib-devel
-# TODO
 BuildRequires:	libaccounts-qt6-devel
-#BuildRequires:	libsignon-qt6-devel >= 8.55
+BuildRequires:	libsignon-qt6-devel >= 8.55
 BuildRequires:	libutempter-devel
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
