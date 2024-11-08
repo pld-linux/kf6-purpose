@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.7
+%define		kdeframever	6.8
 %define		qtver		5.15.2
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.7.0
+Version:	6.8.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	0c7530a9dc134388f942ff51d3974439
+# Source0-md5:	eecce2361cb20578743695c3d3d60367
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
