@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.8
+%define		kdeframever	6.9
 %define		qtver		5.15.2
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.8.0
+Version:	6.9.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	eecce2361cb20578743695c3d3d60367
+# Source0-md5:	e6e75c72051127278b515f1551dcb7f2
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
@@ -107,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/plugins/kf6/purpose
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/barcodeplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/bluetoothplugin.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/clipboardplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/emailplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/imgurplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/kdeconnectplugin.so
