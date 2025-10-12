@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a66f3f9ba573fc81cc604d42f6ef94ee
+# Source0-md5:	cbd871df7bca157b8b5e3ce553b5051d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
@@ -101,35 +101,35 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kfname}6.lang
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libKF6Purpose.so.6
-%attr(755,root,root) %{_libdir}/libKF6Purpose.so.*.*
+%{_libdir}/libKF6Purpose.so.*.*
 %ghost %{_libdir}/libKF6PurposeWidgets.so.6
-%attr(755,root,root) %{_libdir}/libKF6PurposeWidgets.so.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/sharefileitemaction.so
+%{_libdir}/libKF6PurposeWidgets.so.*.*
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/sharefileitemaction.so
 %dir %{_libdir}/qt6/plugins/kf6/purpose
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/barcodeplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/bluetoothplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/clipboardplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/emailplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/imgurplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/kdeconnectplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/kdeconnectsmsplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/pastebinplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/phabricatorplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/reviewboardplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/saveasplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/telegramplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/barcodeplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/bluetoothplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/clipboardplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/emailplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/imgurplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/kdeconnectplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/kdeconnectsmsplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/pastebinplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/phabricatorplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/reviewboardplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/saveasplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/telegramplugin.so
 %{_libdir}/qt6/qml/org/kde/purpose/AlternativesView.qml
 %{_libdir}/qt6/qml/org/kde/purpose/JobView.qml
 %{_libdir}/qt6/qml/org/kde/purpose/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/purpose/libpurposequickplugin.so
+%{_libdir}/qt6/qml/org/kde/purpose/libpurposequickplugin.so
 %dir %{_libdir}/qt6/qml/org/kde/purpose/phabricator
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/purpose/phabricator/libphabricatorquickplugin.so
+%{_libdir}/qt6/qml/org/kde/purpose/phabricator/libphabricatorquickplugin.so
 %dir %{_libdir}/qt6/qml/org/kde/purpose
 %{_libdir}/qt6/qml/org/kde/purpose/phabricator/qmldir
 %{_libdir}/qt6/qml/org/kde/purpose/purposequickplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/purpose/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/purpose/reviewboard
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/purpose/reviewboard/librbpurposequickplugin.so
+%{_libdir}/qt6/qml/org/kde/purpose/reviewboard/librbpurposequickplugin.so
 %{_libdir}/qt6/qml/org/kde/purpose/reviewboard/qmldir
 %{_prefix}/libexec/kf6/purposeprocess
 %{_iconsdir}/hicolor/128x128/apps/phabricator-purpose6.png
@@ -146,8 +146,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/purpose.categories
 %{_datadir}/qlogging-categories6/purpose.renamecategories
 
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/nextcloudplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/purpose/youtubeplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/nextcloudplugin.so
+%{_libdir}/qt6/plugins/kf6/purpose/youtubeplugin.so
 %{_datadir}/accounts/services/kde/google-youtube.service
 %{_datadir}/accounts/services/kde/nextcloud-upload.service
 %{_datadir}/kf6/purpose/nextcloudplugin_config.qml
@@ -156,7 +156,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/kdeconnectQml.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/libkdeconnectQml.so
+%{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/libkdeconnectQml.so
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/qmldir
 
 %files devel
