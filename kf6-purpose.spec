@@ -1,23 +1,24 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.23
+%define		kdeframever	6.24
 %define		qtver		6.8.0
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.23.0
+Version:	6.24.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a61df0e0ed04127740d9088bae3bd7b5
+# Source0-md5:	2962bb81870bfcf485822225d231cecb
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
+BuildRequires:	accounts-qml-module >= 0.7
 BuildRequires:	cmake >= 3.16
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	ka6-kaccounts-integration-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	kf6-kconfig-devel >= %{version}
