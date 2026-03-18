@@ -34,6 +34,7 @@ BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	accounts-qml-module >= 0.7
 Requires:	kf6-dirs
 #Obsoletes:	kf5-%{kfname} < %{version}
 %requires_eq_to Qt6Core Qt6Core-devel
