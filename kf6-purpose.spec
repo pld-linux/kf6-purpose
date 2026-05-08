@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.25
+%define		kdeframever	6.26
 %define		qtver		6.8.0
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.25.0
-Release:	2
+Version:	6.26.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	14bccf259fcaaf0f4ebf61e78887acfa
+# Source0-md5:	55407e04f6090617d5b6693421263793
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
@@ -155,11 +155,18 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kf6/purpose/nextcloudplugin_config.qml
 %{_datadir}/kf6/purpose/youtubeplugin_config.qml
 
+%dir %{_libdir}/qt6/qml/org/kde/purpose/accountshelper
+%{_libdir}/qt6/qml/org/kde/purpose/accountshelper/accountshelper.qmltypes
+%{_libdir}/qt6/qml/org/kde/purpose/accountshelper/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/purpose/accountshelper/libaccountshelper.so
+%{_libdir}/qt6/qml/org/kde/purpose/accountshelper/qmldir
+
 %dir %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/kdeconnectQml.qmltypes
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/libkdeconnectQml.so
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/qmldir
+
 
 %files devel
 %defattr(644,root,root,755)
