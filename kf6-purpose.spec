@@ -50,6 +50,13 @@ alternatives to execute given the requested action type and will
 facilitate components so that all the plugins can receive all the
 information they need.
 
+%description -l pl.UTF-8
+Ten szkielet oferuje możliwość integracji usług i akcji dla dowolnej
+aplikacji bez konieczności implementacji ich specjalnie. Purpose
+zaoferuje im mechanizmy do listowania różnych alternatyw do wykonania
+podanego typu akcji i umożliwi komponentom wykonanie ich, tak że
+wszystkie wtyczki będą mogły otrzymać potrzebne informacje.
+
 %package twitter
 Summary:	Twitter plugin for purpose
 Group:		X11/Development/Libraries
