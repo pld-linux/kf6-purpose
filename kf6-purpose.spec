@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.26
+%define		kdeframever	6.27
 %define		qtver		6.8.0
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
-Version:	6.26.0
+Version:	6.27.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	55407e04f6090617d5b6693421263793
+# Source0-md5:	fe7fe6676662b72d4f2c28a34cb3e2eb
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
@@ -173,6 +173,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/kdeconnectQml.qmltypes
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/libkdeconnectQml.so
 %{_libdir}/qt6/qml/org/kde/purpose/kdeconnect/qmldir
+
+%dir %{_libdir}/qt6/qml/org/kde/purpose/private
+%dir %{_libdir}/qt6/qml/org/kde/purpose/private/widgets
+%{_libdir}/qt6/qml/org/kde/purpose/private/widgets/JobDialog.qml
+%{_libdir}/qt6/qml/org/kde/purpose/private/widgets/KF6PurposeWidgets.qmltypes
+%{_libdir}/qt6/qml/org/kde/purpose/private/widgets/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/purpose/private/widgets/libKF6PurposeWidgetsplugin.so
+%{_libdir}/qt6/qml/org/kde/purpose/private/widgets/qmldir
 
 
 %files devel
