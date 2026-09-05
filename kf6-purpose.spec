@@ -39,7 +39,9 @@ BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires(post,postun):	gtk-update-icon-cache
 Requires:	accounts-qml-module >= 0.7
+Requires:	hicolor-icon-theme
 Requires:	kf6-dirs
 #Obsoletes:	kf5-%{kfname} < %{version}
 %requires_eq_to Qt6Core Qt6Core-devel
@@ -100,8 +102,13 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post
+/sbin/ldconfig
+%update_icon_cache hicolor
+
+%postun
+/sbin/ldconfig
+%update_icon_cache hicolor
 
 %files -f %{kfname}6.lang
 %defattr(644,root,root,755)
