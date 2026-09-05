@@ -62,15 +62,6 @@ zaoferuje im mechanizmy do listowania różnych alternatyw do wykonania
 podanego typu akcji i umożliwi komponentom wykonanie ich, tak że
 wszystkie wtyczki będą mogły otrzymać potrzebne informacje.
 
-%package twitter
-Summary:	Twitter plugin for purpose
-Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-Obsoletes:	kf5-%{kfname}-twitter < %{version}
-
-%description twitter
-Twitter plugin for purpose.
-
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
