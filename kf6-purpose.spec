@@ -15,7 +15,7 @@ Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{v
 # Source0-md5:	c69b4b08b3ef3bffe0feceece70ed5e3
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
-BuildRequires:	Qt6DBuw-devel >= %{qtver}
+BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
 BuildRequires:	Qt6Qml-devel >= %{qtver}
