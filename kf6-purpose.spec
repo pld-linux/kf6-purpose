@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 %define		kdeframever	6.29
-%define		qtver		6.8.0
+%define		qtver		6.9.0
 %define		kfname		purpose
 
 Summary:	Offers available actions for a specific purpose
@@ -15,23 +15,28 @@ Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{v
 # Source0-md5:	c69b4b08b3ef3bffe0feceece70ed5e3
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6DBuw-devel >= %{qtver}
+BuildRequires:	Qt6Gui-devel >= %{qtver}
+BuildRequires:	Qt6Network-devel >= %{qtver}
+BuildRequires:	Qt6Qml-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
-BuildRequires:	accounts-qml-module >= 0.7
-BuildRequires:	cmake >= 3.16
+BuildRequires:	Qt6Widgets-devel >= %{qtver}
+BuildRequires:	cmake >= 3.29
 BuildRequires:	gettext-tools
 BuildRequires:	ka6-kaccounts-integration-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
+BuildRequires:	kf6-kcmutils
 BuildRequires:	kf6-kconfig-devel >= %{version}
 BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	kf6-kio-devel >= %{version}
 BuildRequires:	kf6-kirigami-devel >= %{version}
-BuildRequires:	libaccounts-glib-devel
-BuildRequires:	libaccounts-qt6-devel
-BuildRequires:	libsignon-qt6-devel >= 8.55
-BuildRequires:	libutempter-devel
+BuildRequires:	kf6-kitemmodels
+BuildRequires:	kf6-knotifications-devel >= %{version}
+BuildRequires:	kf6-kservice-devel >= %{version}
+BuildRequires:	kf6-prison
 BuildRequires:	ninja
-BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	accounts-qml-module >= 0.7
