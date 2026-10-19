@@ -8,7 +8,7 @@
 Summary:	Offers available actions for a specific purpose
 Name:		kf6-%{kfname}
 Version:	6.31.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -35,6 +35,7 @@ BuildRequires:	kf6-kitemmodels
 BuildRequires:	kf6-knotifications-devel >= %{version}
 BuildRequires:	kf6-kservice-devel >= %{version}
 BuildRequires:	kf6-prison
+BuildRequires:	libaccounts-qt6-devel
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
