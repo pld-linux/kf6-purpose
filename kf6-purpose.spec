@@ -36,6 +36,7 @@ BuildRequires:	kf6-knotifications-devel >= %{version}
 BuildRequires:	kf6-kservice-devel >= %{version}
 BuildRequires:	kf6-prison
 BuildRequires:	libaccounts-qt6-devel
+BuildRequires:	libsignon-qt6-devel
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
